@@ -1,0 +1,149 @@
+[CONFIG]
+OutputFiles=
+#InputFiles=testmockup.txt
+LogFile=nrfECG.log
+TrendFile=nrfECG-trend.csv
+TrendFileDigits=3
+TrendMode=Off
+TxLogFile=nrfECG.tx
+RxLogFile=nrfECG.rx
+TxLogInitOpen=false
+RxLogInitOpen=false
+Port=COM9
+Baud=460800
+Format=8,N,1
+StartChar={
+EndChar=}
+SlowTransmitLine=false
+BackgroundColour=White
+ForegroundColour=Black
+BackgroundImage=			
+FontName=Times New Roman 
+FontSize=12
+Length=15
+ClientWidth=1920
+ClientHeight=1080
+PlayWaves=false
+FloatFormat=SciEng
+
+
+[MACROS]
+Debug Off=<W,DBV,0>
+Debug Low=<W,DBV,1>
+Debug High=<W,DBV,3>
+Clear Faults=<W,FLT>
+Get Version=<R,VER>
+
+##### TITLE, CLOCK, ETC #####
+[VER]
+Type=Text
+Label="Wearable ECG Monitor "
+FontName=Courier New Bold
+FontSize=14
+Length=50
+Top=5
+Left=5
+
+[TIMER]
+Type=Timer
+Label="Timer Sys = "
+Top=Top+30
+Trend=true
+
+##### DX,DY,DZ #####
+[DV]
+Type=Int
+Label="DV T= "
+Length=20
+Top=Top+20
+Left=5
+Trend=true
+
+[DW]
+Type=Int
+Label="DW T= "
+Top=Top+20
+Trend=true
+
+[DX]
+Type=Int
+Label="DX I= "
+Top=Top+20
+Trend=true
+
+[DY]
+Type=float
+Label="DY I= "
+Top=Top+20
+Trend=true
+
+[DZ]
+Type=float
+Label="DZ I= "
+Top=Top+20
+Trend=true
+
+[DA]
+Type=Float
+Label="DA F= "
+Top=Top+20
+Trend=true
+
+[DB]
+Type=Float
+Label="DB F= "
+Top=Top+20
+Trend=true
+
+##### READINGS #####
+[LBL1]
+Type=Text
+Label="Debug Packet Data"
+Top=Top+20
+FontSize=14
+
+
+[AAA]
+Type=Int
+Label="Normalised Amplitude = "
+Top=Top+30
+Trend=true
+ForegroundColour=Blue
+TrendTrigger=true
+
+[AAB]
+Type=Int
+Label="Time ms 	= "
+Top=Top+20
+ForegroundColour=Blue
+Trend=true
+
+[AAC]
+Type=int
+Label="Heart Rate  = "
+Top=Top+20
+ForegroundColour=Blue
+Trend=true
+
+[AAD]
+Type=Int
+Label="HRV = "
+Top=Top+20
+ForegroundColour=Blue
+Trend=true
+
+[AAE]
+Type=Int
+Label="Body Temp = "
+Top=Top+20
+ForegroundColour=Blue
+Trend=true
+
+[AAF]
+Type=Int
+Label="Packet Number = "
+Top=Top+20
+ForegroundColour=Blue
+Trend=true
+
+
