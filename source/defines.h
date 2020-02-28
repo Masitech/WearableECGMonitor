@@ -6,6 +6,6 @@
 
 #define RX_PIN  		p15
 #define TX_PIN  		p14
-#define BAUD_RATE		460800
+#define BAUD_RATE		115200
 #define ECGUART_UPDATE_RATE_MS 10 
 #endif

@@ -1,0 +1,23 @@
+
+#ifndef SampleClass_H
+#define SampleClass_H 1
+ 
+ 
+//includes 
+
+
+/**
+ *  @class BufferedSerial
+ *  @brief Software buffers and interrupt driven tx and rx for Serial
+ */  
+class SampleClass : public dervivedClass 
+{
+	public:
+	 //constructor 
+		
+	private:
+
+    };
+
+		
+#endif

@@ -30,7 +30,7 @@ NOTICE: This file has been modified by Nordic Semiconductor ASA.
 #include "nrf5x_lf_clk_helper.h"
 
 /*lint ++flb "Enter library region" */
-
+#define CONFIG_NFCT_PINS_AS_GPIOS 1  //for spi to work on pin 9 and 10 
 #define __SYSTEM_CLOCK_64M      (64000000UL)
 
 static bool errata_12(void);

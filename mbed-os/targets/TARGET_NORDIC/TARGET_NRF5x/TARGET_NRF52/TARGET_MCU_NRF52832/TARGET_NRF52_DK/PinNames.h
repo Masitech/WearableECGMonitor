@@ -51,6 +51,8 @@ typedef enum {
 } PinDirection;
 
 typedef enum {
+	    // Not connected
+    NC = (int)0xFFFFFFFF,
     p0  = 0,
     p1  = 1,
     p2  = 2,
@@ -120,20 +122,12 @@ typedef enum {
     P0_30 = p30,
     P0_31 = p31,
 
-    LED1    = p17,
-    LED2    = p18,
-    LED3    = p19,
-    LED4    = p20,
+    LED1    = p7,
 
-    BUTTON1 = p13,
-    BUTTON2 = p14,
-    BUTTON3 = p15,
-    BUTTON4 = p16,
-
-    RX_PIN_NUMBER  = p8,
-    TX_PIN_NUMBER  = p6,
-    CTS_PIN_NUMBER = p7,
-    RTS_PIN_NUMBER = p5,
+    RX_PIN_NUMBER  = p14,
+    TX_PIN_NUMBER  = p15,
+    CTS_PIN_NUMBER = NC,
+    RTS_PIN_NUMBER = NC,
 
     // mBed interface Pins
     USBTX = TX_PIN_NUMBER,
@@ -143,20 +137,10 @@ typedef enum {
     STDIO_UART_CTS = CTS_PIN_NUMBER,
     STDIO_UART_RTS = RTS_PIN_NUMBER,
 
-    SPI_PSELMOSI0 = p23,
-    SPI_PSELMISO0 = p24,
-    SPI_PSELSS0   = p22,
-    SPI_PSELSCK0  = p25,
-
-    SPI_PSELMOSI1 = p12,
-    SPI_PSELMISO1 = p13,
-    SPI_PSELSS1   = p11,
-    SPI_PSELSCK1  = p14,
-
-    SPIS_PSELMOSI = p12,
-    SPIS_PSELMISO = p13,
-    SPIS_PSELSS   = p11,
-    SPIS_PSELSCK  = p14,
+    SPIS_PSELMOSI = p11,
+    SPIS_PSELMISO = p10,
+    SPIS_PSELSS   = p8,
+    SPIS_PSELSCK  = p9,
 
     I2C_SDA0 = p26,
     I2C_SCL0 = p27,
@@ -185,10 +169,9 @@ typedef enum {
     A2 = p28,
     A3 = p29,
     A4 = p30,
-    A5 = p31,
+    A5 = p31
 
-    // Not connected
-    NC = (int)0xFFFFFFFF
+
 } PinName;
 
 typedef enum {

@@ -328,7 +328,7 @@
             <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>6</v6Lang>
-            <v6LangP>7</v6LangP>
+            <v6LangP>4</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
             <v6Lto>0</v6Lto>
@@ -13811,6 +13811,26 @@
               <FileName>defines.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\source\defines.h</FilePath>
+            </File>
+            <File>
+              <FileName>Max30003.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\source\Max30003.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Max30003.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\source\Max30003.h</FilePath>
+            </File>
+            <File>
+              <FileName>MaxAFE.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\source\MaxAFE.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>MaxAFE.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\source\MaxAFE.h</FilePath>
             </File>
           </Files>
         </Group>
