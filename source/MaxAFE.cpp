@@ -8,7 +8,7 @@ Thread 				EcgAFE_Thread;
  MaxAFE_t 		EcgAFE;
  SPI 					spiBus(SPIS_PSELMOSI, SPIS_PSELMISO, SPIS_PSELSCK);     // SPIS_PSELMOSI = p10, SPIS_PSELMISO = p11,SPIS_PSELSCK  = p9,    
  Timer 				EcgTime; //ecg data time keeping 
- 
+ uint32_t MaxAFE_t::packetCounter = 0;
 //local objects 
 InterruptIn ecgFIFO_int(p12);          // @todo fix pcb 
 volatile bool ecgFIFOIntFlag;
