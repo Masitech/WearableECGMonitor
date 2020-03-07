@@ -14,7 +14,7 @@
 
 #include "MaxAFE.h"
 #include "EcgUart.h"
-
+#include "ble/services/HeartRateService.h"
 
 using mbed::callback;
 
@@ -29,6 +29,9 @@ using mbed::callback;
  * notified when one of the value is changed. Clients can also change value of
  * the second, minute and hour characteristric.
  */
+ 
+ BLE &ble_interface = BLE::Instance();
+ 
 class ClockService {
     typedef ClockService Self;
 
@@ -43,8 +46,13 @@ public:
             /* numCharacteristics */ sizeof(_clock_characteristics) /
                                      sizeof(_clock_characteristics[0])
         ),
+				_hr_uuid(GattService::UUID_HEART_RATE_SERVICE),
+				_hr_counter(100),
+        _hr_service(ble_interface, _hr_counter, HeartRateService::LOCATION_FINGER),
+																		 
         _server(NULL),
-        _event_queue(NULL)
+        _event_queue(NULL),
+				_adv_data_builder(_adv_buffer)		//heart rate 											 
     {
         // update internal pointers (value, descriptors and characteristics array)
         _clock_characteristics[0] = &_hour_char;
@@ -61,6 +69,9 @@ public:
 
     void start(BLE &ble_interface, events::EventQueue &event_queue)
     {
+			
+			//The heart rate service added to gat server in the hear rate service constructor @see setupService();
+			
          if (_event_queue) {
             return;
         }
@@ -95,10 +106,27 @@ public:
         EcgUart.printf("\tsecond characteristic value handle %u\r\n", _second_char.getValueHandle());
 
         _event_queue->call_every(1000 /* ms */, callback(this, &Self::increment_second));
+				_event_queue->call_every(100, this, &ClockService::update_sensor_value);
     }
 
 private:
+	//heart rate data 
+    void update_sensor_value() {
+        if (1) {
+            // Do blocking calls or whatever is necessary for sensor polling.
+            // In our case, we simply update the HRM measurement.
+            _hr_counter++;
 
+            //  100 <= HRM bps <=175
+            if (_hr_counter == 175) {
+                _hr_counter = 100;
+            }
+
+            _hr_service.updateHeartRate(_hr_counter);
+        }
+    }
+		
+		
     /**
      * Handler called when a notification or an indication has been sent.
      */
@@ -301,9 +329,10 @@ private:
         return makeFunctionPointer(this, member);
     }
 
-    /**
+    /** 
+		 * Nested Private Template Class 
      * Read, Write, Notify, Indicate  Characteristic declaration helper.
-     *
+     * This is just s another layer on top of Gatt class to declare custom service and characterics 
      * @tparam T type of data held by the characteristic.
      */
     template<typename T>
@@ -377,11 +406,17 @@ private:
     GattService _clock_service;
 
     GattServer* _server;
+		UUID 							_hr_uuid;
+    uint8_t 					_hr_counter;
+    HeartRateService 	_hr_service;
+		uint8_t _adv_buffer[ble::LEGACY_ADVERTISING_MAX_SIZE];
+    ble::AdvertisingDataBuilder _adv_data_builder;
+		
     events::EventQueue *_event_queue;
 };
 
 int main() {
-    BLE &ble_interface = BLE::Instance();
+    
     events::EventQueue event_queue;
     ClockService demo_service;
     BLEProcess ble_process(event_queue, ble_interface);
