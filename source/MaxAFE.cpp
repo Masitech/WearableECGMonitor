@@ -6,11 +6,10 @@
 //Global Object
 Thread 				EcgAFE_Thread;
  MaxAFE_t 		EcgAFE;
- SPI 					spiBus(SPIS_PSELMOSI, SPIS_PSELMISO, SPIS_PSELSCK);     // SPIS_PSELMOSI = p10, SPIS_PSELMISO = p11,SPIS_PSELSCK  = p9,    
- Timer 				EcgTime; //ecg data time keeping 
+ SPI 					spiBus(ECG_MOSI, ECG_MISO, ECG_SCLK);     // SPIS_PSELMOSI = p10, SPIS_PSELMISO = p11,SPIS_PSELSCK  = p9,    
  uint32_t MaxAFE_t::packetCounter = 0;
 //local objects 
-InterruptIn ecgFIFO_int(p12);          // @todo fix pcb 
+InterruptIn ecgFIFO_int(ECG_INT_PIN);          
 volatile bool ecgFIFOIntFlag;
 
 extern "C" void MaxAFE_t::ISR_AFE_Int(void){
@@ -24,10 +23,9 @@ void MaxAFE_t::EcgAfeInit(){
     spiBus.format(8,0);//format 
     spiBus.frequency(1000000); //set freq
 		ConfigAFE(EcgAFE); // setup max30003
-		EcgTime.start(); //start the timer
 		ecgFIFO_int.fall(&ISR_AFE_Int);    // ecg FIFO almost full interrupt
 		EcgAFE_Thread.start(MaxAFE_t::EcgAFEThread);
-    EcgAFE.writeRegister( MAX30003::SYNCH,0);
+    EcgAFE.writeRegister(MAX30003::SYNCH,0);
 }
 
 
@@ -68,17 +66,17 @@ void MaxAFE_t::EcgAFEThread(void){
                 // add results
                 for( idx = 0; idx < readECGSamples; idx++ ) {
                     EcgUart.printf("%6d\r\n", ecgSample[idx]); 
-									 EcgUart_t::ecgDataPacket_t *ecgDataPacketMail = MB_ecgDataPacket.alloc();
+//									 EcgUart_t::ecgDataPacket_t *ecgDataPacketMail = MB_ecgDataPacket.alloc();
 
-									 //add data
-									 ecgDataPacketMail->voltageY = ecgSample[idx];
-									 ecgDataPacketMail->rTimeX = 	EcgTime.read_ms(); // just returns stystem time us
-									 ecgDataPacketMail->HeartRate = 0;
-									 ecgDataPacketMail->HRV = 0;
-									 ecgDataPacketMail->bodyTemp = 0;
-									 ecgDataPacketMail->packetNumber = 0;
-									
-										MB_ecgDataPacket.put(ecgDataPacketMail);
+//									 //add data
+//									 ecgDataPacketMail->voltageY = ecgSample[idx];
+//									 ecgDataPacketMail->rTimeX = 	0; // just returns stystem time us
+//									 ecgDataPacketMail->HeartRate = 0;
+//									 ecgDataPacketMail->HRV = 0;
+//									 ecgDataPacketMail->bodyTemp = 0;
+//									 ecgDataPacketMail->packetNumber = 0;
+//									
+//										MB_ecgDataPacket.put(ecgDataPacketMail);
                 }
                                
             }

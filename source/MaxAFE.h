@@ -40,7 +40,7 @@
 	 //constructor 
 	MaxAFE_t()
 	//create the maxim30003 object 
-	:MAX30003(spiBus, SPIS_PSELSS)
+	:MAX30003(spiBus, ECG_CS)
 	{
 		//call the init code ?
 		//ecgFIFOIntFlag = 0; //no interrupt false 
@@ -52,6 +52,5 @@
 
   
 	};
-	extern Timer 		EcgTime;
 	extern MaxAFE_t EcgAFE;
 #endif
