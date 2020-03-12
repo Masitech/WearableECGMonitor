@@ -52,5 +52,6 @@
 
   
 	};
+
 	extern MaxAFE_t EcgAFE;
 #endif

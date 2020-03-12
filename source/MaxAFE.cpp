@@ -9,7 +9,7 @@ Thread 				EcgAFE_Thread;
  SPI 					spiBus(ECG_MOSI, ECG_MISO, ECG_SCLK);     // SPIS_PSELMOSI = p10, SPIS_PSELMISO = p11,SPIS_PSELSCK  = p9,    
  uint32_t MaxAFE_t::packetCounter = 0;
 //local objects 
-InterruptIn ecgFIFO_int(ECG_INT_PIN);          
+InterruptIn ecgFIFO_int(p16);          // @todo fix pcb 
 volatile bool ecgFIFOIntFlag;
 
 extern "C" void MaxAFE_t::ISR_AFE_Int(void){
@@ -25,7 +25,7 @@ void MaxAFE_t::EcgAfeInit(){
 		ConfigAFE(EcgAFE); // setup max30003
 		ecgFIFO_int.fall(&ISR_AFE_Int);    // ecg FIFO almost full interrupt
 		EcgAFE_Thread.start(MaxAFE_t::EcgAFEThread);
-    EcgAFE.writeRegister(MAX30003::SYNCH,0);
+    EcgAFE.writeRegister( MAX30003::SYNCH,0);
 }
 
 
@@ -70,7 +70,7 @@ void MaxAFE_t::EcgAFEThread(void){
 
 //									 //add data
 //									 ecgDataPacketMail->voltageY = ecgSample[idx];
-//									 ecgDataPacketMail->rTimeX = 	0; // just returns stystem time us
+//									 ecgDataPacketMail->rTimeX = 	EcgTime.read_ms(); // just returns stystem time us
 //									 ecgDataPacketMail->HeartRate = 0;
 //									 ecgDataPacketMail->HRV = 0;
 //									 ecgDataPacketMail->bodyTemp = 0;
