@@ -32224,7 +32224,7 @@
 
   <Group>
     <GroupName>mbed Config</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -32279,54 +32279,6 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\source\fifo.cpp</PathWithFileName>
-      <FilenameWithoutPath>fifo.cpp</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>2675</FileNumber>
-      <FileType>5</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\source\fifo.h</PathWithFileName>
-      <FilenameWithoutPath>fifo.h</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>2676</FileNumber>
-      <FileType>8</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\source\uart.cpp</PathWithFileName>
-      <FilenameWithoutPath>uart.cpp</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>2677</FileNumber>
-      <FileType>5</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\source\uart.h</PathWithFileName>
-      <FilenameWithoutPath>uart.h</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>2678</FileNumber>
-      <FileType>8</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
       <PathWithFileName>.\source\BufferedSerial.cpp</PathWithFileName>
       <FilenameWithoutPath>BufferedSerial.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
@@ -32334,7 +32286,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2679</FileNumber>
+      <FileNumber>2675</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32346,7 +32298,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2680</FileNumber>
+      <FileNumber>2676</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32358,7 +32310,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2681</FileNumber>
+      <FileNumber>2677</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32370,7 +32322,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2682</FileNumber>
+      <FileNumber>2678</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32382,7 +32334,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2683</FileNumber>
+      <FileNumber>2679</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32394,7 +32346,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2684</FileNumber>
+      <FileNumber>2680</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32406,7 +32358,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2685</FileNumber>
+      <FileNumber>2681</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32418,7 +32370,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2686</FileNumber>
+      <FileNumber>2682</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32430,7 +32382,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2687</FileNumber>
+      <FileNumber>2683</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32442,13 +32394,97 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2688</FileNumber>
+      <FileNumber>2684</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>.\source\MaxAFE.h</PathWithFileName>
       <FilenameWithoutPath>MaxAFE.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>2685</FileNumber>
+      <FileType>8</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\source\Battery.cpp</PathWithFileName>
+      <FilenameWithoutPath>Battery.cpp</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>2686</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\source\Battery.h</PathWithFileName>
+      <FilenameWithoutPath>Battery.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>2687</FileNumber>
+      <FileType>8</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\source\MaxClock.cpp</PathWithFileName>
+      <FilenameWithoutPath>MaxClock.cpp</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>2688</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\source\MaxClock.h</PathWithFileName>
+      <FilenameWithoutPath>MaxClock.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>2689</FileNumber>
+      <FileType>8</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\source\BLE_Interface.cpp</PathWithFileName>
+      <FilenameWithoutPath>BLE_Interface.cpp</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>2690</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\source\BLE_Interface.h</PathWithFileName>
+      <FilenameWithoutPath>BLE_Interface.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>2691</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\source\main.h</PathWithFileName>
+      <FilenameWithoutPath>main.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

@@ -490,7 +490,7 @@ static nrfx_err_t spim_xfer(NRF_SPIM_Type               * p_spim,
 
     if (!(flags & NRFX_SPIM_FLAG_HOLD_XFER))
     {
-        nrf_spim_task_trigger(p_spim, NRF_SPIM_TASK_START);
+        nrf_spim_task_trigger(p_spim, NRF_SPIM_TASK_START);	
     }
 #if NRFX_CHECK(NRFX_SPIM_NRF52_ANOMALY_109_WORKAROUND_ENABLED)
     if (flags & NRFX_SPIM_FLAG_HOLD_XFER)
