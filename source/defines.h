@@ -12,7 +12,18 @@
 #define ECG_SCLK			p9
 #define ECG_CS				p8
 #define ECG_FCLOCK		p12
+#define BATT_PIN			p2
 
+#define BATT_MIN 		2500 //2.9v
+#define BATT_MAX		3600 //4.2v  1% = 9.2count 
+#define BATT_CEL		50   //around 5% wiggle room 
 #define BAUD_RATE		115200
 #define ECGUART_UPDATE_RATE_MS 10 
+
+//DEBUG _ Print DEBUG Info to UART 
+#define BATT_DEBUG 0
+#define ECG_DEBUG 0
+#define BLE_DEBUG 0 
+#define UART_DEBUG 0 
+
 #endif

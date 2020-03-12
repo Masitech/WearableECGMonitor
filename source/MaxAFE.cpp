@@ -1,7 +1,8 @@
 
 #include "MaxAFE.h"
 #include "mbed.h"
-
+#include "BLE_Interface.h"
+#include "main.h"
 
 //Global Object
 Thread 				EcgAFE_Thread;
@@ -65,7 +66,8 @@ void MaxAFE_t::EcgAFEThread(void){
                
                 // add results
                 for( idx = 0; idx < readECGSamples; idx++ ) {
-                    EcgUart.printf("%6d\r\n", ecgSample[idx]); 
+									AFEBLE.updateHRS(ecgSample[idx]);
+  //                  EcgUart.printf("%6d\r\n", ecgSample[idx]); 
 //									 EcgUart_t::ecgDataPacket_t *ecgDataPacketMail = MB_ecgDataPacket.alloc();
 
 //									 //add data
