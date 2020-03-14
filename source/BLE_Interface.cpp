@@ -20,8 +20,8 @@ void ECG_Monitor::on_init_complete(BLE::InitializationCompleteCallbackContext *p
         print_mac_address();
         start_advertising();
 }
-void ECG_Monitor::updateHRS(int16_t value){
-				_hr_service.updateHeartRate(value);
+void ECG_Monitor::updateECG_S(int16_t value){
+				_ECG_service.updateEcgData(value);
 }
 
 void ECG_Monitor::update_sensor_value(){
@@ -43,11 +43,11 @@ void ECG_Monitor::start_advertising(){
         );
 
         _adv_data_builder.setFlags();
-			  _adv_data_builder.setAppearance(ble::adv_data_appearance_t::GENERIC_HEART_RATE_SENSOR);
+				_adv_data_builder.setName(DEVICE_NAME);
+			  //_adv_data_builder.setAppearance(ble::adv_data_appearance_t::GENERIC_HEART_RATE_SENSOR);
         _adv_data_builder.setLocalServiceList(mbed::make_Span(&_battery_uuid, 1));
 				_adv_data_builder.setLocalServiceList(mbed::make_Span(&_hr_uuid, 1));
-				_adv_data_builder.setName(DEVICE_NAME);
-
+				_adv_data_builder.setLocalServiceList(mbed::make_Span(&_ECG_uuid, 1));
         /* Setup advertising */
 
         ble_error_t error = _ble.gap().setAdvertisingParameters(

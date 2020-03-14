@@ -10,7 +10,7 @@ Thread 				EcgAFE_Thread;
  SPI 					spiBus(ECG_MOSI, ECG_MISO, ECG_SCLK);     // SPIS_PSELMOSI = p10, SPIS_PSELMISO = p11,SPIS_PSELSCK  = p9,    
  uint32_t MaxAFE_t::packetCounter = 0;
 //local objects 
-InterruptIn ecgFIFO_int(p16);          // @todo fix pcb 
+InterruptIn ecgFIFO_int(ECG_INT_PIN);          // @todo fix pcb 
 volatile bool ecgFIFOIntFlag;
 
 extern "C" void MaxAFE_t::ISR_AFE_Int(void){
@@ -66,8 +66,9 @@ void MaxAFE_t::EcgAFEThread(void){
                
                 // add results
                 for( idx = 0; idx < readECGSamples; idx++ ) {
-									AFEBLE.updateHRS(ecgSample[idx]);
-  //                  EcgUart.printf("%6d\r\n", ecgSample[idx]); 
+									static int16_t x = -8765;
+									AFEBLE.updateECG_S(x);
+                  EcgUart.printf("%6d\r\n", ecgSample[idx]); 
 //									 EcgUart_t::ecgDataPacket_t *ecgDataPacketMail = MB_ecgDataPacket.alloc();
 
 //									 //add data
