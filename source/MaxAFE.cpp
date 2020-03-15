@@ -66,9 +66,8 @@ void MaxAFE_t::EcgAFEThread(void){
                
                 // add results
                 for( idx = 0; idx < readECGSamples; idx++ ) {
-									static int16_t x = -8765;
-									AFEBLE.updateECG_S(x);
                   EcgUart.printf("%6d\r\n", ecgSample[idx]); 
+									AFEBLE.updateECG_S(ecgSample[idx]);
 //									 EcgUart_t::ecgDataPacket_t *ecgDataPacketMail = MB_ecgDataPacket.alloc();
 
 //									 //add data

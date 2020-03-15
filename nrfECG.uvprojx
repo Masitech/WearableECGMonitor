@@ -13748,11 +13748,6 @@
           <GroupName>source</GroupName>
           <Files>
             <File>
-              <FileName>main.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>source/main.cpp</FilePath>
-            </File>
-            <File>
               <FileName>pretty_printer.h</FileName>
               <FileType>5</FileType>
               <FilePath>source/pretty_printer.h</FilePath>
@@ -13843,9 +13838,24 @@
               <FilePath>.\source\BLE_Interface.h</FilePath>
             </File>
             <File>
+              <FileName>main.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>source/main.cpp</FilePath>
+            </File>
+            <File>
               <FileName>main.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\source\main.h</FilePath>
+            </File>
+            <File>
+              <FileName>BLEProcess.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\source\BLEProcess.h</FilePath>
+            </File>
+            <File>
+              <FileName>ECGService.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\source\ECGService.h</FilePath>
             </File>
           </Files>
         </Group>

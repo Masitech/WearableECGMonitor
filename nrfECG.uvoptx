@@ -32251,18 +32251,6 @@
     <File>
       <GroupNumber>3</GroupNumber>
       <FileNumber>2672</FileNumber>
-      <FileType>8</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>source/main.cpp</PathWithFileName>
-      <FilenameWithoutPath>main.cpp</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>2673</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32274,7 +32262,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2674</FileNumber>
+      <FileNumber>2673</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32286,7 +32274,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2675</FileNumber>
+      <FileNumber>2674</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32298,7 +32286,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2676</FileNumber>
+      <FileNumber>2675</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32310,7 +32298,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2677</FileNumber>
+      <FileNumber>2676</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32322,7 +32310,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2678</FileNumber>
+      <FileNumber>2677</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32334,7 +32322,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2679</FileNumber>
+      <FileNumber>2678</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32346,7 +32334,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2680</FileNumber>
+      <FileNumber>2679</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32358,7 +32346,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2681</FileNumber>
+      <FileNumber>2680</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32370,7 +32358,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2682</FileNumber>
+      <FileNumber>2681</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32382,7 +32370,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2683</FileNumber>
+      <FileNumber>2682</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32394,7 +32382,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2684</FileNumber>
+      <FileNumber>2683</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32406,7 +32394,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2685</FileNumber>
+      <FileNumber>2684</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32418,7 +32406,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2686</FileNumber>
+      <FileNumber>2685</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32430,7 +32418,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2687</FileNumber>
+      <FileNumber>2686</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32442,7 +32430,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2688</FileNumber>
+      <FileNumber>2687</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32454,7 +32442,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2689</FileNumber>
+      <FileNumber>2688</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -32466,13 +32454,25 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>2690</FileNumber>
+      <FileNumber>2689</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>.\source\BLE_Interface.h</PathWithFileName>
       <FilenameWithoutPath>BLE_Interface.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>2690</FileNumber>
+      <FileType>8</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>source/main.cpp</PathWithFileName>
+      <FilenameWithoutPath>main.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -32485,6 +32485,30 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\source\main.h</PathWithFileName>
       <FilenameWithoutPath>main.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>2692</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\source\BLEProcess.h</PathWithFileName>
+      <FilenameWithoutPath>BLEProcess.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>2693</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\source\ECGService.h</PathWithFileName>
+      <FilenameWithoutPath>ECGService.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

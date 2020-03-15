@@ -213,9 +213,9 @@ protected:
         unsigned getNumValueBytes(void) const
         {
             if (valueBytes[FLAGS_BYTE_INDEX] & VALUE_FORMAT_FLAG) {
-                return 1 + sizeof(uint16_t);
+                return 1 + sizeof(int16_t);
             } else {
-                return 1 + sizeof(uint8_t);
+                return 1 + sizeof(int8_t);
             }
         }
 

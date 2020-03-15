@@ -1,4 +1,4 @@
-
+#include "main.h"
 #include "BLE_Interface.h"
 const char DEVICE_NAME[] = "ECG Monitor";
 
@@ -26,8 +26,14 @@ void ECG_Monitor::updateECG_S(int16_t value){
 
 void ECG_Monitor::update_sensor_value(){
         if (_ble.gap().getState().connected) {
+						static uint16_t hrmValue = 2500;
 						uint32_t value = batteryObj->getBatteryLevel();
             _battery_service.updateBatteryLevel(value);
+						//_hr_service.updateHeartRate(++hrmValue);
+					
+									static int16_t x = -8765;
+								//	
+									if (x > 8765 ) x = -8765;
         }
 }
 
@@ -41,16 +47,36 @@ void ECG_Monitor::start_advertising(){
             ble::advertising_type_t::CONNECTABLE_UNDIRECTED,
             ble::adv_interval_t(ble::millisecond_t(1000))
         );
-
-        _adv_data_builder.setFlags();
-				_adv_data_builder.setName(DEVICE_NAME);
-			  //_adv_data_builder.setAppearance(ble::adv_data_appearance_t::GENERIC_HEART_RATE_SENSOR);
-        _adv_data_builder.setLocalServiceList(mbed::make_Span(&_battery_uuid, 1));
-				_adv_data_builder.setLocalServiceList(mbed::make_Span(&_hr_uuid, 1));
-				_adv_data_builder.setLocalServiceList(mbed::make_Span(&_ECG_uuid, 1));
+				ble_error_t error;
+        error = _adv_data_builder.setFlags();
+        if (error) {
+            print_error(error, "_adv_data_builder.setFlags() failed");
+            return;
+        }
+				error =_adv_data_builder.setName(DEVICE_NAME);
+        if (error) {
+            print_error(error, "_adv_data_builder.setName(DEVICE_NAME) failed");
+            return;
+        }
+			  //error = _adv_data_builder.setAppearance(ble::adv_data_appearance_t::GENERIC_HEART_RATE_SENSOR);
+        error = _adv_data_builder.setLocalServiceList(mbed::make_Span(&_battery_uuid, 1));
+        if (error) {
+            print_error(error, "_adv_data_builder.setLocalServiceList(mbed::make_Span(&_battery_uuid, 1) failed");
+            return;
+        }
+				//error = _adv_data_builder.setLocalServiceList(mbed::make_Span(&_hr_uuid, 1));
+        if (error) {
+            print_error(error, "_adv_data_builder.setLocalServiceList(mbed::make_Span(&_hr_uuid, 1) failed");
+            return;
+        }
+				//error = _adv_data_builder.setLocalServiceList(mbed::make_Span(&_ECG_uuid, 1));
+        if (error) {
+            print_error(error, "_adv_data_builder.setLocalServiceList(mbed::make_Span(&_ECG_uuid, 1) failed");
+            return;
+        }
         /* Setup advertising */
 
-        ble_error_t error = _ble.gap().setAdvertisingParameters(
+        error = _ble.gap().setAdvertisingParameters(
             ble::LEGACY_ADVERTISING_HANDLE,
             adv_parameters
         );

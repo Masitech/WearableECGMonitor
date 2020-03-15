@@ -28,9 +28,9 @@ public:
         _battery_level(0),
         _battery_service(ble, _battery_level),
 				//HRM(HRM UUID)
-        _hr_uuid(GattService::UUID_HEART_RATE_SERVICE),
-        _hr_counter(0),
-        _hr_service(ble, _hr_counter, HeartRateService::LOCATION_FINGER),
+//        _hr_uuid(GattService::UUID_HEART_RATE_SERVICE),
+//        _hr_counter(77),
+//        _hr_service(ble, _hr_counter, HeartRateService::LOCATION_FINGER),
 
 				//custom ECG Basin on HRM
         _ECG_uuid(ECG_SERVICE_UUID),
@@ -62,9 +62,9 @@ private:
     uint8_t _battery_level;
     BatteryService _battery_service;
 		//HRM
-    UUID _hr_uuid;
-    uint8_t _hr_counter;
-    HeartRateService _hr_service;
+//    UUID _hr_uuid;
+//    uint8_t _hr_counter;
+//    HeartRateService _hr_service;
 	  //ECH Data
     UUID _ECG_uuid;
     int16_t _ECG_counter;
