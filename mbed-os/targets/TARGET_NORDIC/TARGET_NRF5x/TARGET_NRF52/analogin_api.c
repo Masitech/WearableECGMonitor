@@ -85,9 +85,8 @@ void analogin_init(analogin_t *obj, PinName pin)
     nrf_saadc_input_t input = channel + 1;
 
     /* Configure channel and pin:
-     *  - the 1/4 gain and VDD/4 makes the reference voltage VDD.
 	 *	+ (Mahmed) refferece voltage internally 
-	 *	  than from vdd it causes issues at 1.9v area 
+	 *	  than from vdd it causes issues at 1.45 - 1.9v area 
      */ 
     nrf_saadc_channel_config_t channel_config = {
         .resistor_p = NRF_SAADC_RESISTOR_DISABLED,

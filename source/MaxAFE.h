@@ -25,6 +25,9 @@
     static const int FIFO_VALID_SAMPLE_MASK =  0x0;
     static const int FIFO_FAST_SAMPLE_MASK 	=  0x1;
     static const int ETAG_BITS_MASK 				= 0x7;
+		static const int RTOR_STATUS 						=  1 << 10;
+	  static const int RTOR_REG_OFFSET 				= 10;
+    static constexpr float RTOR_LSB_RES 				= 0.0078125f;
 		static uint32_t packetCounter;
 		//
 		

@@ -13848,11 +13848,6 @@
               <FilePath>.\source\main.h</FilePath>
             </File>
             <File>
-              <FileName>BLEProcess.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\source\BLEProcess.h</FilePath>
-            </File>
-            <File>
               <FileName>ECGService.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\source\ECGService.h</FilePath>

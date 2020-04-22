@@ -23,17 +23,13 @@ void ECG_Monitor::on_init_complete(BLE::InitializationCompleteCallbackContext *p
 void ECG_Monitor::updateECG_S(int16_t value){
 				_ECG_service.updateEcgData(value);
 }
-
+void ECG_Monitor::updateHR(uint16_t value){
+				_hr_service.updateHeartRate(value);
+}
 void ECG_Monitor::update_sensor_value(){
         if (_ble.gap().getState().connected) {
-						static uint16_t hrmValue = 2500;
 						uint32_t value = batteryObj->getBatteryLevel();
             _battery_service.updateBatteryLevel(value);
-						//_hr_service.updateHeartRate(++hrmValue);
-					
-									static int16_t x = -8765;
-								//	
-									if (x > 8765 ) x = -8765;
         }
 }
 
@@ -64,7 +60,7 @@ void ECG_Monitor::start_advertising(){
             print_error(error, "_adv_data_builder.setLocalServiceList(mbed::make_Span(&_battery_uuid, 1) failed");
             return;
         }
-				//error = _adv_data_builder.setLocalServiceList(mbed::make_Span(&_hr_uuid, 1));
+				error = _adv_data_builder.setLocalServiceList(mbed::make_Span(&_hr_uuid, 1));
         if (error) {
             print_error(error, "_adv_data_builder.setLocalServiceList(mbed::make_Span(&_hr_uuid, 1) failed");
             return;
