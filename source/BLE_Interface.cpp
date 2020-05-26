@@ -1,5 +1,7 @@
 #include "main.h"
 #include "BLE_Interface.h"
+#include "defines.h"
+
 const char DEVICE_NAME[] = "ECG Monitor";
 
 events::EventQueue event_queue(/* event count */ 16 * EVENTS_EVENT_SIZE);
@@ -27,10 +29,13 @@ void ECG_Monitor::updateHR(uint16_t value){
 				_hr_service.updateHeartRate(value);
 }
 void ECG_Monitor::update_sensor_value(){
-        if (_ble.gap().getState().connected) {
+        if (_ble.gap().getState().connected && !BREADBOARD) {
 						uint32_t value = batteryObj->getBatteryLevel();
             _battery_service.updateBatteryLevel(value);
         }
+				else if(_ble.gap().getState().connected && BREADBOARD){
+					_battery_service.updateBatteryLevel(93);
+				}
 }
 
 void ECG_Monitor::onDisconnectionComplete(const ble::DisconnectionCompleteEvent&){

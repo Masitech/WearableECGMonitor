@@ -44,11 +44,7 @@ void MaxAFE_t::EcgAFEThread(void){
             ecgFIFOIntFlag = 0;
             EcgUart.printf("Interrupt received....\r\n");
             status = EcgAFE.readRegister( MAX30003::STATUS );      // Read the STATUS register
-            EcgUart.printf("Status : 0x%x\r\n"
-                      "Current BPM is %3.2f\r\n\r\n", status, BPM);
-            
-						AFEBLE.updateHR((uint16_t)BPM);
-             
+            //EcgUart.printf("Status : 0x%x\r\n" "Current BPM is %3.2f\r\n\r\n", status, BPM);
             // Check if R-to-R interrupt asserted
             if( ( status & RTOR_STATUS ) == RTOR_STATUS ){           
             
@@ -61,8 +57,9 @@ void MaxAFE_t::EcgAFEThread(void){
                 BPM = 1.0f / ( RtoR * RTOR_LSB_RES / 60.0f );   
                 
                 // Print RtoR              
-                EcgUart.printf("RtoR : %d\r\n\r\n", RtoR);                   
-                
+                EcgUart.printf("RtoR : %d\r\n\r\n", RtoR);   
+            
+								AFEBLE.updateHR((uint16_t)BPM);
             }  
              
             // Check if EINT interrupt asserted
@@ -91,11 +88,8 @@ void MaxAFE_t::EcgAFEThread(void){
                 
                 // Print results 
                 for( idx = 0; idx < readECGSamples; idx++ ) {
-                    EcgUart.printf("Sample : %6d, \tETAG : 0x%x\r\n", ecgSample[idx], ETAG[idx]);
-									simpleECG = 5000 + ecgSample[idx];
-									if (simpleECG < 0) simpleECG = 0;
-									simpleECG = simpleECG / 260;
-									AFEBLE.updateECG_S(simpleECG);
+                  EcgUart.printf("Sample : %6d, \tETAG : 0x%x\r\n", ecgSample[idx], ETAG[idx]);
+									AFEBLE.updateECG_S( ecgSample[idx]);
 									//AFEBLE.updateHR((uint16_t)simpleECG);
                 }
                 EcgUart.printf("\r\n\r\n\r\n"); 
