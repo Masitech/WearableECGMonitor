@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2020-01-30T14:58:06Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.5.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "HealthMonitor"
+        },
+        "Owner": "Masum Ahmed <ma786@kent.ac.uk>",
+        "Size": {
+            "X": 36.75,
+            "Y": 60
+        }
+    }
+}
